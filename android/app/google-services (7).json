@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351435673921",
+    "project_id": "tiziapp-d0ff9",
+    "storage_bucket": "tiziapp-d0ff9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351435673921:android:08f427fa7926db1ddcd1c0",
+        "android_client_info": {
+          "package_name": "com.example.tizi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAefC8ajsxhYzohc2nX1j8a9wW43dh7iTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
