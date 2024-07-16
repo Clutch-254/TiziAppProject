@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tizi_app/features/widgets/text_field.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -21,12 +22,9 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 width: double.infinity,
                 height: height / 2.7,
+                child: Image.asset("images/Tizi.png"),
               ),
-              SizedBox(
-                width: double.infinity,
-                height: height / 2.7,
-                child: Image.asset("assets/images.png"),
-              ),
+              TextFieldInput()
             ],
           ),
         ),

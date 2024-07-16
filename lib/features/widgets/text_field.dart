@@ -10,10 +10,16 @@ class TextFieldInput extends StatelessWidget {
       child: TextField(
         decoration: InputDecoration(
           hintText: "Email",
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             color: Colors.grey,
             fontSize: 18,
           ),
+          prefixIcon: const Icon(
+            Icons.email,
+            color: Colors.grey,
+          ),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           border: InputBorder.none,
           filled: true,
           fillColor: const Color(0),
