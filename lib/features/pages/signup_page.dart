@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:tizi_app/features/pages/signup_page.dart';
+import 'package:tizi_app/features/pages/login_page.dart';
 import 'package:tizi_app/features/technicals/button.dart';
 import 'package:tizi_app/features/widgets/text_field.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -25,9 +26,13 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               SizedBox(
                 width: double.infinity,
-                height: height / 2.7,
+                height: height / 2.8,
                 child: Image.asset("images/Tizi.png"),
               ),
+              TextFieldInput(
+                  textEditingController: emailController,
+                  hintText: "Enter your name",
+                  icon: Icons.person),
               TextFieldInput(
                   textEditingController: emailController,
                   hintText: "Enter your email",
@@ -37,23 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: "Enter your password",
                 icon: Icons.lock,
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 35,
-                ),
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "Forgot password?",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.purple,
-                    ),
-                  ),
-                ),
-              ),
-              TheButton(onTab: () {}, text: "Log In"),
+              TheButton(onTab: () {}, text: "Sign Up"),
               SizedBox(
                 height: height / 15,
               ),
@@ -61,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Don't have an account?",
+                    "Already have an account?",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.purple,
@@ -72,16 +61,17 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SignupPage(),
+                          builder: (context) => const LoginPage(),
                         ),
                       );
                     },
                     child: const Text(
-                      "Sign Up",
+                      "Log In",
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          color: Colors.purple),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.purple,
+                      ),
                     ),
                   ),
                 ],

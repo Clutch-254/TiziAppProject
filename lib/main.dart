@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tizi_app/features/pages/login_page.dart';
+import 'package:tizi_app/features/pages/splash_screen.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +29,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Tizi",
-      home: LoginPage(),
+      home: SplashScreen(
+        child: LoginPage(),
+      ),
     );
   }
 }

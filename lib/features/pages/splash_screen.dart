@@ -11,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 8), () {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => widget.child!),
@@ -22,11 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Text(
           "Tizi, your fitness and wellness app.",
-          style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Color.fromARGB(255, 144, 18, 167),
+              fontWeight: FontWeight.bold),
         ),
       ),
     );
